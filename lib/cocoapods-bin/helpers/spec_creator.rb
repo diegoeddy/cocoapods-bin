@@ -78,9 +78,8 @@ module CBin
 
         # 避免重复显示头文件
         # Source Code
-        @spec.source_files = []
-        @spec.public_header_files = []
-        @spec.private_header_files = []
+        # @spec.source_files = framework_contents('Headers/*')
+        # @spec.public_header_files = []
 
         # Unused for binary
         spec_hash = @spec.to_hash
