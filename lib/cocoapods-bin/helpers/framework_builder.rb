@@ -157,7 +157,7 @@ module CBin
       def compile
         defines = "GCC_PREPROCESSOR_DEFINITIONS='$(inherited)'"
         defines += ' '
-        defines += @spec.consumer(@platform).compiler_flags.join(' ')
+        # defines += @spec.consumer(@platform).compiler_flags.join(' ')
 
         options = ios_build_options
         xcodebuild(defines, options)
