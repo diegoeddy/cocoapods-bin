@@ -143,7 +143,7 @@ module CBin
       end
 
       def ios_build_options
-        "ARCHS=\'#{ios_architectures.join(' ')}\' OTHER_CFLAGS=\'-fembed-bitcode -Qunused-arguments\'"
+        "ARCHS=\'#{ios_architectures.join(' ')}\' OTHER_CFLAGS=\'$(inherited) -fembed-bitcode -Qunused-arguments\'"
       end
 
       def ios_architectures
